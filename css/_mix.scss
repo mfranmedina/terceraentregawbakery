@@ -1,0 +1,103 @@
+
+
+@mixin config ($font-family, $color){
+    font-family: $font-family;
+    color: $color;
+    text-align: center;   
+
+    
+}
+
+
+$redes: (
+    
+    red1: rgb(135, 182, 135),
+    red2: rgb(209, 216, 141),
+    red3: rgb(124, 124, 158),
+    red4: none,
+);
+
+@each $red, $fontf in $redes {
+    .btn--#{$red} {
+        
+        width: 100%;        
+        box-shadow: 0 0 5px 1px white;  
+        margin-bottom: 24px; 
+        border-radius: 5px;     
+        cursor: pointer;
+        transition: all ease-out 0.2s;
+        background-color: $fontf;      
+
+    }
+}
+
+
+@mixin img ($img2){
+    
+    width: 100%; 
+    background: black;
+    box-shadow: 0 0 5px 1px white;  
+    margin-bottom: 24px; 
+    border-radius: 5px; 
+    
+    @if ($img2 == "true") {
+
+        cursor: pointer;
+        transition: all ease-out 0.2s; 
+        &:hover{
+            transform: scale(1.05);
+        }
+        
+    }  
+    
+}
+
+@mixin tipos ($color) {
+
+    background-color: #000; 
+    font-size: 13px; 
+    $color: $color4bg;
+    text-align: center;  
+    
+}
+
+@mixin pos {
+
+    position: relative;
+    border-radius: 5px;     
+    overflow: hidden;
+    cursor: pointer;    
+    
+}
+
+.post {
+    @include pos;
+        &:hover footer{
+            width: 40%;            
+        }
+        footer{ 
+            width: 0%;
+            height: auto;
+            background: rgba(154, 209, 209, .71);
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            transition: all 400ms ease-in-out;
+
+              
+        }
+    }
+
+footer {
+    h3{
+        @include config ($font-family:$font, 
+        $color: $color2bg); 
+    }
+
+}
+    
+
+

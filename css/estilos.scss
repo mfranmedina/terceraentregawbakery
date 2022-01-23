@@ -1,0 +1,150 @@
+
+@import "config";
+@import "fun";
+@import "mix";
+
+
+*{
+    @include reset();
+    box-sizing: border-box;
+
+}
+
+
+
+
+header{
+
+   background-color: $colorbg;
+
+}
+
+body{
+    
+    background-color: $color2bg;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    @include config ($font-family:$font, 
+    $color: $color2bg);   
+    font-size: 30px;
+    margin-bottom: 200px;
+
+}
+
+h2{
+
+    @include config ($font-family:$font, 
+                    $color: $color3bg);
+                    font-size: size(5);
+  
+}
+
+h3{
+    @include config ($font-family:$font, 
+    $color: $color3bg);    
+    font-size: size(3);
+   
+
+}
+
+h4{
+    @include config ($font-family:$font, 
+    $color: $color2bg); 
+  
+}
+
+h5{
+    
+    @include config ($font-family:$font, 
+    $color: $color2bg);   
+    font-size: 30px;
+    margin-bottom: 200px;
+ 
+ 
+}
+
+h6{
+    @include config ($font-family:$font, 
+    $color: $color3bg);
+   
+   
+}
+
+
+p{  
+   
+    @include config ($font-family:$font, 
+    $color: $color2bg); 
+
+    
+   
+}   
+
+.estilo{
+    text-align: center;
+    color: $color3bg;
+    font-size: $size;
+    background-color: $color-background1;
+    padding: 25px;
+}
+
+
+.blog1{
+    @extend .estilo;
+    
+}
+
+
+.blog2{
+    @extend .estilo;
+    background-color: $color-background2;
+}
+
+
+.blog3{
+    @extend .estilo;
+    background-color: $color-background3;
+}
+
+
+.caja1 {
+    @include img ($img2:"true");
+}
+
+
+.caja2 {
+    @include img ($img2:"false");
+}
+
+.foot {
+    color: $color3bg;
+
+}
+
+
+.tip1{  
+
+    @include tipos ($color: $color4bg);
+  
+ }
+
+
+.icono{
+
+    display:block;
+    margin:auto;
+    padding-bottom: 24px;
+    
+     
+}
+
+
+ 
+  
+
+  
